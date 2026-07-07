@@ -1,0 +1,29 @@
+{
+  "name": "dd-characters-web",
+  "private": true,
+  "version": "1.0.0",
+  "author": "ddainusshaa",
+  "description": "NUI for dd-characters multicharacter system",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-svelte": "^1.0.1"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^7.1.2",
+    "@tailwindcss/vite": "^4.3.2",
+    "@tsconfig/svelte": "^5.0.8",
+    "@types/node": "^24.13.2",
+    "svelte": "^5.56.4",
+    "svelte-check": "^4.7.1",
+    "tailwindcss": "^4.3.2",
+    "typescript": "~6.0.2",
+    "vite": "^8.1.1"
+  }
+}

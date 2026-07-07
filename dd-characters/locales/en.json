@@ -1,0 +1,17 @@
+{
+  "notify": {
+    "character_limit": "You have reached your character limit.",
+    "character_not_found": "Character not found.",
+    "create_failed": "Could not create your character. Try again.",
+    "delete_failed": "Could not delete this character.",
+    "delete_disabled": "Character deletion is disabled on this server.",
+    "invalid_payload": "Invalid character data.",
+    "invalid_firstname": "First name is not valid.",
+    "invalid_lastname": "Last name is not valid.",
+    "invalid_height": "Height is outside the allowed range.",
+    "invalid_backstory": "Backstory is too long.",
+    "invalid_birthdate": "Date of birth is not valid.",
+    "invalid_gender": "Gender selection is not valid.",
+    "player_exit": "You left the city."
+  }
+}

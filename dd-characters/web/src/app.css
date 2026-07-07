@@ -1,0 +1,114 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-typewriter: 'Courier New', ui-monospace, monospace;
+  --color-accent: #e63946;
+  --color-accent-hover: #d62839;
+  --color-surface: #0d0d0f;
+  --color-surface-raised: #16161a;
+  --color-surface-overlay: #1c1c22;
+  --color-border: #2a2a32;
+  --color-muted: #8b8b96;
+  --color-success: #22c55e;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  #app {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: none !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    color: #fff;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    position: fixed;
+    inset: 0;
+    user-select: none;
+  }
+
+  #app {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  /* Browser dev only: fake game world behind transparent UI (NOT a UI background). */
+  html.env-browser body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: url('https://r2.fivemanage.com/oQMWWU8Zujl7zYrtJYZIj/Screenshot2025-08-13073930.png')
+      center / cover no-repeat;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #3f3f46;
+    border-radius: 999px;
+  }
+
+  .typewriter-label {
+    font-family: var(--font-typewriter);
+    font-size: 0.75rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgb(255 255 255 / 0.65);
+    text-shadow:
+      0 1px 2px rgb(0 0 0 / 0.95),
+      0 2px 10px rgb(0 0 0 / 0.75);
+  }
+
+  .typewriter-text {
+    font-family: var(--font-typewriter);
+    font-size: 1rem;
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+    color: rgb(255 255 255 / 0.88);
+    text-wrap: pretty;
+    text-shadow:
+      0 1px 2px rgb(0 0 0 / 0.95),
+      0 2px 12px rgb(0 0 0 / 0.8);
+  }
+
+  .ui-text-shadow {
+    text-shadow:
+      0 1px 2px rgb(0 0 0 / 0.95),
+      0 2px 10px rgb(0 0 0 / 0.75),
+      0 0 24px rgb(0 0 0 / 0.45);
+  }
+
+  .ui-drop-shadow {
+    filter: drop-shadow(0 2px 10px rgb(0 0 0 / 0.85));
+  }
+}
