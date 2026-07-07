@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    /* Додано щоб UI завжди було поверх усього */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Додано щоб UI завжди було поверх усього */
+    z-index: 999999;
+}
+
+#background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('content.png') no-repeat center center/cover;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+#form-container {
+    background: rgba(20, 20, 30, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Додано щоб UI завжди було поверх усього */
+    z-index: 999999;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #4facfe;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.form {
+    display: none;
+}
+
+.form.active {
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4facfe;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.checkbox-label input {
+    width: auto;
+    margin-right: 8px;
+}
+
+.switch-form {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.switch-form a {
+    color: #4facfe;
+    text-decoration: none;
+}
+
+.switch-form a:hover {
+    text-decoration: underline;
+}
+
+#message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    display: none;
+}
+
+#message.success {
+    background: rgba(0, 255, 0, 0.2);
+    color: #0f0;
+    display: block;
+}
+
+#message.error {
+    background: rgba(255, 0, 0, 0.2);
+    color: #f00;
+    display: block;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="background"></div>
+        <div id="form-container">
+            <h1 id="server-name">Server Name</h1>
+            
+            <!-- Login Form -->
+            <form id="login-form" class="form active">
+                <h2>Вхід</h2>
+                <input type="text" id="login-username" placeholder="Логін" required>
+                <input type="password" id="login-password" placeholder="Пароль" required>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="remember-me"> Запам'ятати мене
+                </label>
+                <button type="submit">Увійти</button>
+                <p class="switch-form">Немає акаунту? <a href="#" data-form="register">Зареєструватися</a></p>
+                <p class="switch-form"><a href="#" data-form="recovery">Забули пароль?</a></p>
+            </form>
+
+            <!-- Register Form -->
+            <form id="register-form" class="form">
+                <h2>Реєстрація</h2>
+                <input type="text" id="reg-username" placeholder="Логін" required>
+                <input type="email" id="reg-email" placeholder="Email" required>
+                <input type="password" id="reg-password" placeholder="Пароль (мін. 6 символів)" required minlength="6">
+                <input type="password" id="reg-confirm" placeholder="Підтвердіть пароль" required minlength="6">
+                <button type="submit">Зареєструватися</button>
+                <p class="switch-form">Вже є акаунт? <a href="#" data-form="login">Увійти</a></p>
+            </form>
+
+            <!-- Recovery Form -->
+            <form id="recovery-form" class="form">
+                <h2>Відновлення паролю</h2>
+                <input type="text" id="rec-discord" placeholder="Discord ID" required>
+                <button type="button" id="request-code">Отримати код</button>
+                <input type="text" id="rec-code" placeholder="Код з Discord" style="display:none;" required>
+                <input type="password" id="rec-new-password" placeholder="Новий пароль" style="display:none;" required>
+                <button type="submit" id="reset-btn" style="display:none;">Змінити пароль</button>
+                <p class="switch-form"><a href="#" data-form="login">Повернутися до входу</a></p>
+            </form>
+
+            <div id="message"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
